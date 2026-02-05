@@ -56,8 +56,8 @@ setup(
                 os.path.join(ROOT, "third_party/eigen"),
             ],
             extra_compile_args={
-                "cxx": ["-O3", "-std=c++17"],
-                "nvcc": ["-O3","-std=c++17"] + cc_flag,
+                "cxx": ["-O3", "-std=c++17", "-DGLOG_USE_GLOG_EXPORT"],
+                "nvcc": ["-O3","-std=c++17","-DGLOG_USE_GLOG_EXPORT"] + cc_flag,
             }
         )
     ],
